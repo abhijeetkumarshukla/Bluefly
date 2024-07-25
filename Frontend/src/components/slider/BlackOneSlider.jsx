@@ -4,7 +4,7 @@ import Slider from "react-slick";
  
 function BlackOneSlider() {
     const settings = {
-      dots: true,
+       
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -14,7 +14,7 @@ function BlackOneSlider() {
       cssEase: "linear"
     };
     return (
-      <Box className="slider-container" p={2} textAlign={'center'} bg={'black'} color={'white'}>
+      <Box className="slider-container"  w={'99%'} p={2} textAlign={'center'} bg={'black'} color={'white'}>
         <Slider {...settings}>
           <Box>
            <Text fontSize='sm' fontWeight={500}><strong>WELCOME TO BLUEFLY:</strong>  Luxury brands at discounted prices</Text> 

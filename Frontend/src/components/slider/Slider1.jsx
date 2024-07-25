@@ -1,5 +1,5 @@
  
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
  
 
@@ -54,43 +54,22 @@ const SliderOne = () => {
   };
  
   const arr = [
-    // "https://static1.lenskart.com/media/desktop/img/2024/feb/IN/tentpole/web%20banner.jpg",
-    // "  https://static1.lenskart.com/media/desktop/img/2024/jan/turban/Desktop-GIF.gif",
-    // " https://static5.lenskart.com/media/uploads/Web_Banner_eyesun-1.jpg",
-    // " https://static5.lenskart.com/media/uploads/web_bannerlkairpop21421.gif",
-    // " https://static5.lenskart.com/media/uploads/Web-bannerTentpole.jpg ",
-    // " https://static5.lenskart.com/media/uploads/web02apr.jpg",
-    // " https://static1.lenskart.com/media/desktop/img/republic/chic-metal/web.jpg",
-    // " https://static1.lenskart.com/media/desktop/img/oct9/elc-two/web-1.gif",
-    // " https://static1.lenskart.com/media/desktop/img/2024/apr/vibe-badlo/Frame%2048097456.jpg",
-    // " https://static5.lenskart.com/media/uploads/final-lpl-webbanner-1.gif",
-    // " https://static1.lenskart.com/media/desktop/img/Feb24/bloom/InBloom-WebBanner.jpg",
-    // "https://static5.lenskart.com/media/uploads/web-banner.gif ",
-    // " https://static1.lenskart.com/media/desktop/img/republic/matte-new/web.gif",
-    // " https://static5.lenskart.com/media/uploads/homepage_banner.jpg",
-    // "https://static1.lenskart.com/media/desktop/img/republic/chic-metal/web.jpg ",
-    // " https://static1.lenskart.com/media/desktop/img/oct9/holiday-edit/Web-banner.jpg",
-    // " https://static5.lenskart.com/media/uploads/Web-bannerTentpole.jpg",
-    // " https://static5.lenskart.com/media/uploads/final-lpl-webbanner-1.gif",
-    // " https://static5.lenskart.com/media/uploads/web02apr.jpg",
-    // " https://static1.lenskart.com/media/desktop/img/Mar24/SheildShades/SheildShadesWebBanner.jpg",
-    // " https://static1.lenskart.com/media/desktop/img/republic/tr-flex/Desktop.jpg",
-    // "https://static1.lenskart.com/media/desktop/img/republic/future-classic/web.gif ",
-    // " https://static1.lenskart.com/media/desktop/img/republic/petite/Web-banner%20option%202.jpg",
-    // " https://static1.lenskart.com/media/desktop/img/oct9/holiday-edit/Desktop.jpg",
-    // " https://static1.lenskart.com/media/desktop/img/sep22/jj-titanium/Web-Banner.gif",
-    // " https://static1.lenskart.com/media/desktop/img/republic/eco_jj/Desktop%20(2).gif",
-    // " https://static1.lenskart.com/media/desktop/img/republic/hustlr-ace/Hustlr_Ace_Desktop_Banner.gif",
-    // " https://static1.lenskart.com/media/desktop/img/2024/feb/IN/tentpole/web%20banner.jpg",
-    // " https://static1.lenskart.com/media/desktop/img/2024/feb/IN/Sobhita/Desktop.png"
-     
+     "https://famous-caramel-42646b.netlify.app/images/banner%20img/Valentino.jpg",
+     "https://www.bluefly.com/cdn/shop/files/AdobeStock_157593748_2_1512x.jpg?v=1712177399",
+     "https://www.bluefly.com/cdn/shop/files/shutterstock_773947222_97e3ce6e-89fa-4a0f-a5d5-d0d373ae995e_1512x.jpg?v=1660340662",
+     "https://www.bluefly.com/cdn/shop/files/shutterstock_324325775_1_1512x.jpg?v=1660337720",
+     "https://www.bluefly.com/cdn/shop/files/pietro-schellino-RMMmKR8RCoo-unsplash_1512x.jpg?v=1687447308",
+     "https://www.bluefly.com/cdn/shop/files/shutterstock_390723769_4_7_1512x.jpg?v=1660348351",
+     "https://www.bluefly.com/cdn/shop/files/shutterstock_2056290722_1512x.jpg?v=1660337209",
+     "https://www.bluefly.com/cdn/shop/files/shutterstock_442324294_1512x.jpg?v=1660338965"
+    
   ];
 
   return (
-        <Box  w={'99%'} m={"auto"}  pt={[2, 2, 2, 2]} pb={[2, 2,2,2]} position="relative">
+        <Box height={'70vh'} overflow={'hidden'} w={'99vw'} m={"auto"}     position="relative">
     <Slider {...settings}>
         {arr.map((elem, i) => (
-          <img src={elem} alt="slider" key={i}   />
+          <Image  src={elem} alt="slider" key={i}   />
         ))}
       </Slider>
     </Box>

@@ -24,6 +24,7 @@ const LowNavbar = () => {
           pb={5}
           color={'red'}
           variant={'ghost'}
+          fontWeight={400}
           _hover={{ borderBottom: "2px solid black",  background: "none" }}
           borderRadius={"none"}    
     > 𝙲𝙻𝙴𝙰𝚁𝙰𝙽𝙲𝙴</Button>

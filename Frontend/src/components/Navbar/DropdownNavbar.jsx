@@ -1,4 +1,4 @@
-import { Button, Flex, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent,  PopoverTrigger } from "@chakra-ui/react"
+import { Button, Flex, Heading, Image, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent,  PopoverTrigger, SimpleGrid, Text } from "@chakra-ui/react"
 import { useState } from "react";
 
 
@@ -95,7 +95,7 @@ const DropDownNavbar = () => {
       zIndex={2}
       pt={'1'}>
 
-    <Flex gap={'7'}    >
+    <Flex gap={'4'}      >
       {/* CLOTHING */}
     <Popover  isOpen={hoverOne} onClose={() => setHoverOne(false)} onOpen={() => setHoverOne(true)}>
   <PopoverTrigger>
@@ -103,20 +103,39 @@ const DropDownNavbar = () => {
         onMouseEnter={isHoverOneTrue}
         onMouseLeave={isHoverOneFalse}
           pt={"5"}
-          pr={"1"}
+          // pr={"1"}
           pb={5}
-          color={'gray'}
           
+          fontWeight={480}
           _hover={{ borderBottom: "2px solid black" ,  background: "none"}}
           borderRadius={"none"}
           variant={'ghost'}    
     >CLOTHING</Button>
   </PopoverTrigger>
-  <PopoverContent>
-    <PopoverArrow />
-    <PopoverCloseButton />
-     
-    <PopoverBody>Are you sure you want to have that milkshake?</PopoverBody>
+  <PopoverContent w={'100vw'} onMouseEnter={isHoverOneTrue}  onMouseLeave={isHoverOneFalse} >
+     <PopoverBody> 
+
+    <SimpleGrid   gridTemplateColumns={"repeat(3,1fr)"}
+                    gap={3}
+                    color={"61608B"}
+                    
+                    
+                    w={"60%"}>
+      <SimpleGrid>
+         <Image src="https://www.bluefly.com/cdn/shop/files/women.jpg?v=1613619704"/>
+          <Text fontWeight={600}>Dresses</Text>
+          <Text>Up to 80% Off</Text>           
+      </SimpleGrid>
+
+      <SimpleGrid>
+        <Text fontWeight={600}>Womens Clothing</Text>
+      </SimpleGrid>
+
+      <SimpleGrid>
+        <Text fontWeight={600}>Mens Clothing</Text>
+      </SimpleGrid>
+    </SimpleGrid>
+    </PopoverBody>
   </PopoverContent>
 </Popover>
 
@@ -129,11 +148,12 @@ const DropDownNavbar = () => {
         onMouseEnter={isHoverTwoTrue}
         onMouseLeave={isHoverTwoFalse}
           pt={"5"}
-          pr={"1"}
+           
           pb={5}
-          color={'gray'}
+           
+          fontWeight={400}
           variant={'ghost'}
-          _hover={{ borderBottom: "2px solid blue",  background: "none" }}
+          _hover={{ borderBottom: "2px solid black",  background: "none" }}
           borderRadius={"none"}    
     >SHOES</Button>
   </PopoverTrigger>
@@ -153,11 +173,12 @@ const DropDownNavbar = () => {
         onMouseEnter={isHoverThreeTrue}
         onMouseLeave={isHoverThreeFalse}
           pt={"5"}
-          pr={"1"}
+        
           pb={5}
-          color={'gray'}
+          
           variant={'ghost'}
-          _hover={{ borderBottom: "2px solid blue",  background: "none" }}
+          fontWeight={400}
+          _hover={{ borderBottom: "2px solid black",  background: "none" }}
           borderRadius={"none"}    
     >HANDBAGS</Button>
   </PopoverTrigger>
@@ -179,11 +200,12 @@ const DropDownNavbar = () => {
         onMouseEnter={isHoverFourTrue}
         onMouseLeave={isHoverFourFalse}
           pt={"5"}
-          pr={"1"}
+          
           pb={5}
-          color={'gray'}
+          
           variant={'ghost'}
-          _hover={{ borderBottom: "2px solid blue",  background: "none" }}
+          fontWeight={400}
+          _hover={{ borderBottom: "2px solid black",  background: "none" }}
           borderRadius={"none"}    
     >DESIGNERS</Button>
   </PopoverTrigger>
@@ -205,11 +227,11 @@ const DropDownNavbar = () => {
         onMouseEnter={isHoverFiveTrue}
         onMouseLeave={isHoverFiveFalse}
           pt={"5"}
-          pr={"1"}
           pb={5}
-          color={'gray'}
+          
           variant={'ghost'}
-          _hover={{ borderBottom: "2px solid blue",  background: "none" }}
+          fontWeight={400}
+          _hover={{ borderBottom: "2px solid black",  background: "none" }}
           borderRadius={"none"}    
     >SUNGLASSES</Button>
   </PopoverTrigger>
@@ -229,11 +251,12 @@ const DropDownNavbar = () => {
         onMouseEnter={isHoverSixTrue}
         onMouseLeave={isHoverSixFalse}
           pt={"5"}
-          pr={"1"}
+        
           pb={5}
-          color={'gray'}
+           
           variant={'ghost'}
-          _hover={{ borderBottom: "2px solid blue",  background: "none" }}
+          fontWeight={400}
+          _hover={{ borderBottom: "2px solid black",  background: "none" }}
           borderRadius={"none"}    
     >JEWELRY & WATCHES</Button>
   </PopoverTrigger>
@@ -255,11 +278,12 @@ const DropDownNavbar = () => {
         onMouseEnter={isHoverSevenTrue}
         onMouseLeave={isHoverSevenFalse}
           pt={"5"}
-          pr={"1"}
+         
           pb={5}
-          color={'gray'}
+           
           variant={'ghost'}
-          _hover={{ borderBottom: "2px solid blue" ,  background: "none"}}
+          fontWeight={400}
+          _hover={{ borderBottom: "2px solid black" ,  background: "none"}}
           borderRadius={"none"}    
     >ACCESSORIES</Button>
   </PopoverTrigger>
@@ -282,10 +306,11 @@ const DropDownNavbar = () => {
         onMouseEnter={isHoverEightTrue}
         onMouseLeave={isHoverEightFalse}
           pt={"5"}
-          pr={"1"}
+        
           pb={5}
-          color={'gray'}
+          
           variant={'ghost'}
+          fontWeight={400}
           _hover={{ borderBottom: "2px solid black",  background: "none" }}
           borderRadius={"none"}    
     >HOME</Button>
@@ -306,10 +331,11 @@ const DropDownNavbar = () => {
         onMouseEnter={isHoverNineTrue}
         onMouseLeave={isHoverNineFalse}
           pt={"5"}
-          pr={"1"}
+       
           pb={5}
-          color={'gray'}
+          
           variant={'ghost'}
+          fontWeight={400}
           _hover={{ borderBottom: "2px solid black",  background: "none" }}
           borderRadius={"none"}    
     >UNDER $50</Button>

@@ -1,4 +1,6 @@
-import { Box } from "@chakra-ui/react"
+  
+import BlackOneSlider from "../components/slider/BlackOneSlider"
+import SliderOne from "../components/slider/Slider1"
 import Navbar from "/src/components/Navbar/Navbar.jsx"
 
  
@@ -6,10 +8,11 @@ import Navbar from "/src/components/Navbar/Navbar.jsx"
 const Home = () => {
   return (
      <>
-     <Box>
+    
      
      <Navbar/>
-     </Box>
+     <BlackOneSlider/>
+      <SliderOne/>
      </>
   )
 }

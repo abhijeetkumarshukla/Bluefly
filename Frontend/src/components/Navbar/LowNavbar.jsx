@@ -12,7 +12,7 @@ const LowNavbar = () => {
         setHoverOne(false);
       }
   return (
-     <Flex justifyContent={'center'}>
+     <Flex justifyContent={'center'}  display={["none", "none", "flex", "flex"]}>
         <Popover  isOpen={hoverOne} onClose={() => setHoverOne(false)} onOpen={() => setHoverOne(true)}>
   <PopoverTrigger>
     <Button

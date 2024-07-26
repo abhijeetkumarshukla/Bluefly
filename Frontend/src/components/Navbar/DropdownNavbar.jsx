@@ -94,18 +94,15 @@ const DropDownNavbar = () => {
        justifyContent={'space-evenly'}   
       zIndex={2}
       pt={'1'}>
-
-    <Flex gap={'4'}      >
+         
+    <Flex gap={'4'}    display={["none", "none", "flex", "flex"]} flexWrap={'wrap'} justifyContent={'center'}  >
       {/* CLOTHING */}
     <Popover  isOpen={hoverOne} onClose={() => setHoverOne(false)} onOpen={() => setHoverOne(true)}>
   <PopoverTrigger>
     <Button
         onMouseEnter={isHoverOneTrue}
         onMouseLeave={isHoverOneFalse}
-          pt={"5"}
-          // pr={"1"}
-          pb={5}
-          
+         
           fontWeight={480}
           _hover={{ borderBottom: "2px solid black" ,  background: "none"}}
           borderRadius={"none"}
@@ -392,8 +389,7 @@ const DropDownNavbar = () => {
     <Button
       onMouseEnter={isHoverTwoTrue}
       onMouseLeave={isHoverTwoFalse}
-      pt={5}
-      pb={5}
+      
       fontWeight={400}
       variant='ghost'
       _hover={{ borderBottom: "2px solid black", background: "none" }}
@@ -571,10 +567,7 @@ const DropDownNavbar = () => {
     <Button
         onMouseEnter={isHoverThreeTrue}
         onMouseLeave={isHoverThreeFalse}
-          pt={"5"}
-        
-          pb={5}
-          
+         
           variant={'ghost'}
           fontWeight={400}
           _hover={{ borderBottom: "2px solid black",  background: "none" }}
@@ -862,10 +855,7 @@ const DropDownNavbar = () => {
     <Button
         onMouseEnter={isHoverFourTrue}
         onMouseLeave={isHoverFourFalse}
-          pt={"5"}
-          
-          pb={5}
-          
+           
           variant={'ghost'}
           fontWeight={400}
           _hover={{ borderBottom: "2px solid black",  background: "none" }}
@@ -1156,9 +1146,7 @@ const DropDownNavbar = () => {
     <Button
         onMouseEnter={isHoverFiveTrue}
         onMouseLeave={isHoverFiveFalse}
-          pt={"5"}
-          pb={5}
-          
+        
           variant={'ghost'}
           fontWeight={400}
           _hover={{ borderBottom: "2px solid black",  background: "none" }}
@@ -1436,7 +1424,76 @@ const DropDownNavbar = () => {
     </PopoverBody>
   </PopoverContent>
 </Popover>
+ 
 
+{/* ACCESSORIES */}
+
+
+<Popover isOpen={hoverSeven} onClose={() => setHoverSeven(false)} onOpen={() => setHoverSeven(true)}>
+  <PopoverTrigger>
+    <Button
+      onMouseEnter={isHoverSevenTrue}
+      onMouseLeave={isHoverSevenFalse}
+      
+      variant="ghost"
+      fontWeight={400}
+      _hover={{ borderBottom: "2px solid black", background: "none" }}
+      borderRadius="none"
+    >
+      ACCESSORIES
+    </Button>
+  </PopoverTrigger>
+  <PopoverContent w="100vw" onMouseEnter={isHoverSevenTrue} onMouseLeave={isHoverSevenFalse}>
+    <PopoverBody>
+      <SimpleGrid gridTemplateColumns="repeat(2, 1fr)" gap={3} color="61608B" m="auto" w="30%">
+        <SimpleGrid>
+          <Link to="/allhandbags">
+            <Text fontWeight={600}>Womens Accessories</Text>
+          </Link>
+          <SimpleGrid gap={3}>
+            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
+              Shop All
+            </Text>
+            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
+              Bag Charms, Straps, & Accessories
+            </Text>
+            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
+              Belts
+            </Text>
+            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
+              Cosmetic Bags
+            </Text>
+            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
+              Gloves
+            </Text>
+            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
+              Scarves & Wraps
+            </Text>
+            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
+              Optical & Reading Glasses
+            </Text>
+            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
+              Travel Bags & Luggage
+            </Text>
+          </SimpleGrid>
+        </SimpleGrid>
+
+        <SimpleGrid>
+          <Text fontWeight={600}>Mens Accessories</Text>
+          
+        </SimpleGrid>
+
+        <SimpleGrid>
+          <Text fontWeight={600}>Shop All</Text>
+        </SimpleGrid>
+      </SimpleGrid>
+    </PopoverBody>
+  </PopoverContent>
+</Popover>
+
+ 
+
+ 
 {/* JEWELRY & WATCHES */}
 
 <Popover  isOpen={hoverSix} onClose={() => setHoverSix(false)} onOpen={() => setHoverSix(true)}>
@@ -1444,9 +1501,7 @@ const DropDownNavbar = () => {
     <Button
         onMouseEnter={isHoverSixTrue}
         onMouseLeave={isHoverSixFalse}
-          pt={"5"}
         
-          pb={5}
            
           variant={'ghost'}
           fontWeight={400}
@@ -1664,74 +1719,6 @@ const DropDownNavbar = () => {
 </Popover>
 
 
-{/* ACCESSORIES */}
-
-
-<Popover isOpen={hoverSeven} onClose={() => setHoverSeven(false)} onOpen={() => setHoverSeven(true)}>
-  <PopoverTrigger>
-    <Button
-      onMouseEnter={isHoverSevenTrue}
-      onMouseLeave={isHoverSevenFalse}
-      pt={5}
-      pb={5}
-      variant="ghost"
-      fontWeight={400}
-      _hover={{ borderBottom: "2px solid black", background: "none" }}
-      borderRadius="none"
-    >
-      ACCESSORIES
-    </Button>
-  </PopoverTrigger>
-  <PopoverContent w="100vw" onMouseEnter={isHoverSevenTrue} onMouseLeave={isHoverSevenFalse}>
-    <PopoverBody>
-      <SimpleGrid gridTemplateColumns="repeat(2, 1fr)" gap={3} color="61608B" m="auto" w="30%">
-        <SimpleGrid>
-          <Link to="/allhandbags">
-            <Text fontWeight={600}>Womens Accessories</Text>
-          </Link>
-          <SimpleGrid gap={3}>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Shop All
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Bag Charms, Straps, & Accessories
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Belts
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Cosmetic Bags
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Gloves
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Scarves & Wraps
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Optical & Reading Glasses
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Travel Bags & Luggage
-            </Text>
-          </SimpleGrid>
-        </SimpleGrid>
-
-        <SimpleGrid>
-          <Text fontWeight={600}>Mens Accessories</Text>
-          
-        </SimpleGrid>
-
-        <SimpleGrid>
-          <Text fontWeight={600}>Shop All</Text>
-        </SimpleGrid>
-      </SimpleGrid>
-    </PopoverBody>
-  </PopoverContent>
-</Popover>
-
- 
-
 
 {/* HOME*/}
 
@@ -1741,9 +1728,7 @@ const DropDownNavbar = () => {
     <Button
         onMouseEnter={isHoverEightTrue}
         onMouseLeave={isHoverEightFalse}
-          pt={"5"}
-        
-          pb={5}
+           
           
           variant={'ghost'}
           fontWeight={400}
@@ -1796,9 +1781,7 @@ const DropDownNavbar = () => {
     <Button
         onMouseEnter={isHoverNineTrue}
         onMouseLeave={isHoverNineFalse}
-          pt={"5"}
-       
-          pb={5}
+          
           
           variant={'ghost'}
           fontWeight={400}

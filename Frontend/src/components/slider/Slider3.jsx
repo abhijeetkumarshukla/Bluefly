@@ -32,7 +32,7 @@ export function SamplePrevArrow(props) {
       width="40px"
       height="40px"
       position="absolute"
-      left="10px"
+      left="25px"
       top="50%"
       transform="translateY(-50%)"
       zIndex="1"
@@ -43,7 +43,7 @@ export function SamplePrevArrow(props) {
   );
 }
 
-const SliderOne = () => {
+const Slider3 = () => {
   const settings = {
     autoplay: true,
     autoplaySpeed: 2000,
@@ -57,8 +57,8 @@ const SliderOne = () => {
   };
 
   const arr = [
-    "https://famous-caramel-42646b.netlify.app/images/banner%20img/Valentino.jpg",
-    "https://www.bluefly.com/cdn/shop/files/AdobeStock_157593748_2_1512x.jpg?v=1712177399",
+    " https://www.bluefly.com/cdn/shop/files/shutterstock_324325775_1_1512x.jpg?v=1660337720",
+    " https://www.bluefly.com/cdn/shop/files/shutterstock_1207523875_1512x.jpg?v=1660338294",
     "https://www.bluefly.com/cdn/shop/files/shutterstock_773947222_97e3ce6e-89fa-4a0f-a5d5-d0d373ae995e_1512x.jpg?v=1660340662",
     "https://www.bluefly.com/cdn/shop/files/shutterstock_324325775_1_1512x.jpg?v=1660337720",
     "https://www.bluefly.com/cdn/shop/files/pietro-schellino-RMMmKR8RCoo-unsplash_1512x.jpg?v=1687447308",
@@ -68,7 +68,7 @@ const SliderOne = () => {
   ];
 
   return (
-    <Box height={'380px'} overflow="hidden" w="99vw" m="auto" mt="2" position="relative" >
+    <Box height={'380px'} overflow="hidden" w="99vw" m="auto" mt="4" position="relative" >
       <Slider {...settings}>
         {arr.map((elem, i) => (
           <Box key={i} height="380px" display="flex" alignItems="center" justifyContent="center">
@@ -80,4 +80,4 @@ const SliderOne = () => {
   );
 };
 
-export default SliderOne;
+export default Slider3;

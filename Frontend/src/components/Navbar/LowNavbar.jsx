@@ -1,5 +1,6 @@
-import { Button, Flex, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverTrigger } from "@chakra-ui/react"
+import { Button, Flex, Popover,   PopoverBody,   PopoverContent, PopoverTrigger, SimpleGrid, Text } from "@chakra-ui/react"
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
  
 
@@ -29,11 +30,264 @@ const LowNavbar = () => {
           borderRadius={"none"}    
     > 𝙲𝙻𝙴𝙰𝚁𝙰𝙽𝙲𝙴</Button>
   </PopoverTrigger>
-  <PopoverContent>
-    <PopoverArrow />
-    <PopoverCloseButton />
+  <PopoverContent w={'100vw'}  onMouseEnter={isHoverOneTrue}  onMouseLeave={isHoverOneFalse}>
+   
      
-    <PopoverBody>Are you sure you want to have that milkshake?</PopoverBody>
+    <PopoverBody> 
+
+       
+    <SimpleGrid   gridTemplateColumns={"repeat(2,1fr)"}
+                    gap={3}
+                    color={"61608B"}
+                    m={'auto'}
+                    
+                    w={"40%"}>
+       
+      <SimpleGrid>
+      <NavLink to={"/allhandbags"}> <Text fontWeight={600}> Womens </Text></NavLink>  
+             
+
+      <SimpleGrid gap={3} mt={5}>
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                          Shop All
+                        </Text>
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        > Activewear
+                        </Text>
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                           Accessories
+                        </Text>
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                        Coats & Jackets
+                        </Text>
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                        Dresses
+                        </Text>
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                           Handbags
+                        </Text>
+
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                           Jeans & Denim
+                        </Text>
+
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >                          
+                         Jewelry
+                        </Text>
+
+
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                        Lingerie & Hosiery
+                        </Text>
+
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                        Pants & Leggings 
+                        </Text>
+
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                           Shoes         
+                        </Text>
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                         Saint Laurent
+                        </Text>
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                       Sunglasses
+                        </Text>
+                      </SimpleGrid>
+
+      </SimpleGrid>
+
+      <SimpleGrid>
+        <Text fontWeight={600}> Mens</Text>
+
+        <SimpleGrid gap={3} mt={5}>
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                          Shop All
+                        </Text>
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                        Accessories
+                        </Text>
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                            Coats & Jackets
+                        </Text>
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                         Dress Shirts
+                        </Text>
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                           Pants
+                        </Text>
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >  Polo Shirts
+                        </Text>
+
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                             Shoes
+                        </Text>
+
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                             Suits & Separates
+                        </Text>
+
+
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                            Sunglasses
+                        </Text>
+
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                             Sweaters
+                        </Text>
+
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                            T-Shirts
+                        </Text>
+
+                        <Text
+                          fontSize={"small"}
+                          color="gray"
+                          _hover={{ color: "black" }}
+                          transition="color 0.1s"
+                        >
+                         Watches
+                        </Text>
+
+                         
+                      </SimpleGrid>
+      </SimpleGrid>
+    </SimpleGrid>
+
+    </PopoverBody>
   </PopoverContent>
 </Popover>
  

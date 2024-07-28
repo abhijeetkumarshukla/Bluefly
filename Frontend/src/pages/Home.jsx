@@ -6,6 +6,7 @@ import Navbar from "/src/components/Navbar/Navbar.jsx"
 import Slider2 from "../components/slider/Slider2"
 import Slider3 from "../components/slider/Slider3"
 import Slider4 from "../components/slider/Slider4"
+import Footer from "../components/Footer/Footer"
 
  
 
@@ -96,7 +97,7 @@ const Home = () => {
   {/* =-------------------------------------------*/}
 
 
-  <Flex gap={6} justifyContent={'center'} pl={2.5} flexDirection={['column', 'column', 'row']} color={'white'} pt={10} w={'100%'} m={'auto'} fontWeight={500}>
+  <Flex gap={6} justifyContent={'center'}   flexDirection={['column', 'column', 'row']} color={'white'} pt={10} w={'100%'} m={'auto'} fontWeight={500}>
     <Flex flexDirection={'column'}   pt={'80px'}  backgroundImage="url('https://www.bluefly.com/cdn/shop/files/Bluefly_Tile_Refresh_2_540x.png?v=1712086012')"
       backgroundSize="cover"
       backgroundPosition="center"
@@ -164,38 +165,37 @@ const Home = () => {
  {/* ----------------------- */}
 
 
-{/* 
 <Flex
   gap={6}
   justifyContent="center"
   pt={10}
-  w="100%"
+  w="100vw"
   m="auto"
   fontWeight={500}
-  flexWrap={{ base: 'wrap', md: 'nowrap' }}
+  flexWrap={{ base: 'wrap', md: 'wrap' }}
 >
   <Box w={{ base: "100%", md: "400px" }} textAlign="center" mb={{ base: 4, md: 0 }}>
-    <Image w={{ base: "90%", md: "350px" }} m="auto" src="https://www.bluefly.com/cdn/shop/files/denim_540x.jpg?v=1615204984" />
+    <Image w={{ base: "90%", md: "350px",lg:"400px"  }} m="auto" src="https://www.bluefly.com/cdn/shop/files/denim_540x.jpg?v=1615204984" />
     <Text w={{ base: "90%", md: "350px" }} fontSize={{ base: "xl", md: "2xl" }}>
       Up to 85% Off the denim shop for him & her
     </Text>
     <Text w={{ base: "90%", md: "350px" }}>
       From Hudson Jeans, Joes Jeans, J Brand & More
     </Text>
-    <Button borderRadius="none" border="0.5px solid gray" bg="white" mt={4}>
+    <Button borderRadius="none" border="0.5px solid #E6E6E6" bg="white" mt={4}>
       SHOP DENIM
     </Button>
   </Box>
 
   <Box w={{ base: "100%", md: "400px" }} textAlign="center" mb={{ base: 4, md: 0 }}>
-    <Image w={{ base: "90%", md: "350px" }} m="auto" src="https://www.bluefly.com/cdn/shop/files/shutterstock_1112754335-REV_360x.jpg?v=1656342184" />
+    <Image w={{ base: "90%", md: "350px",lg:"300px" }} m="auto" src="https://www.bluefly.com/cdn/shop/files/shutterstock_1112754335-REV_360x.jpg?v=1656342184" />
     <Text w={{ base: "90%", md: "350px" }} fontSize={{ base: "xl", md: "2xl" }}>
       Up to 90% OFF TRENDING JUMPSUITS & ROMPERS
     </Text>
     <Text w={{ base: "90%", md: "350px" }}>
       Must-Haves From Halston, BCBGMAXAZRIA, iro & More
     </Text>
-    <Button borderRadius="none" border="0.5px solid gray" bg="white" mt={4}>
+    <Button borderRadius="none" border="0.5px solid #E6E6E6" bg="white" mt={4}>
       SHOP JUMPSUITS
     </Button>
   </Box>
@@ -203,16 +203,20 @@ const Home = () => {
   <Box w={{ base: "100%", md: "400px" }} textAlign="center">
     <Image w={{ base: "90%", md: "350px" }} m="auto" src="https://www.bluefly.com/cdn/shop/files/Tops_360x.jpg?v=1615206654" />
     <Text w={{ base: "90%", md: "350px" }} fontSize={{ base: "xl", md: "2xl" }}>
-      Up to 90% Off WOMEN'S MUST-HAVE ACCESSORIES
+      Up to 90% Off WOMENS MUST-HAVE ACCESSORIES
     </Text>
     <Text w={{ base: "90%", md: "350px" }}>
       Shop Wallets, Belts, Hats, Sunglasses & More
     </Text>
-    <Button borderRadius="none" border="0.5px solid gray" bg="white" mt={4}>
-      SHOP WOMEN'S ACCESSORIES
+    <Button borderRadius="none" border="0.5px solid #E6E6E6" bg="white" mt={4}>
+      SHOP WOMENS ACCESSORIES
     </Button>
   </Box>
-</Flex> */}
+</Flex> 
+
+{/* ------------------------------- */}
+
+<Footer/>
      </>
 
   )

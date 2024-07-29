@@ -1,10 +1,12 @@
-import { Box, Button, Checkbox, Heading, Input, Text } from '@chakra-ui/react'
+import { Box, Button, Checkbox, Heading, Input, Text, } from '@chakra-ui/react'
 import Navbar from '/src/components/Navbar/Navbar.jsx'
 import BlackOneSlider from '/src/components/slider/BlackOneSlider'
 import Footer from '/src/components/Footer/Footer'
  
+ 
 const SignUp = () => {
-    
+
+ 
   return (
     <Box  >
          <Navbar/>
@@ -14,28 +16,41 @@ const SignUp = () => {
                
          <Box w={'30vw'}  m={'auto'} display={["none", "none", "none", "block"]}  >
            
-            
+         <form >
+
+     
+
+      
            <label><Text fontSize={'lg'}>ᴜsᴇʀɴᴀᴍᴇ</Text></label>            
             <Input 
-            type="text"   required
+            type="text"   required 
+          
             placeholder="Name Please" mt={2} borderRadius={'none'}  p={5} />
+           
 
+           
             <label><Text fontSize={'lg'}>ᴇᴍᴀɪʟ</Text></label>            
             <Input 
             type="email"  required
             placeholder="Email Likhna Jaruri h Bhai" mt={2} borderRadius={'none'}  p={5} />
-
+              
             
+
+             
             <label><Text fontSize={'lg'}>ᴘᴀssᴡᴏʀᴅ</Text></label>
             <Input 
-            type="password" name="password"  required
+            type="password" name="password"  required 
+             
             placeholder="Password To Ekdam Jaruri h Bhai" mt={2} borderRadius={'none'} p={5} />
-
+            
             <Checkbox p={5} defaultChecked> Subscribe to stay updated with new offers!</Checkbox>
             
-            <Button    borderRadius={'none'} fontSize={'lg'} mt={5} w={'100%'} p={5} bg={'black'} color={'white'} _hover={{bg:'gray'}}>ᴄʀᴇᴀᴛᴇ</Button>
-            
+            <Button  
+              type="submit"
            
+              borderRadius={'none'} fontSize={'lg'} mt={5} w={'100%'} p={5} bg={'black'} color={'white'} _hover={{bg:'gray'}}>ᴄʀᴇᴀᴛᴇ</Button>
+              
+           </form>
          </Box> 
 {/* ------------------------------------------------------ */}
 

@@ -3,11 +3,13 @@ const express = require('express')
 const connection = require('./config/db')
 const PORT = 8080
 const userRouter = require("./routes/user.routes")
+const productRouter = require("./routes/product.routes");
  
 const app = express()
 app.use(cors())
 app.use(express.json());
 app.use('/user',userRouter);
+app.use("/product", productRouter);
 
 app.get('/',(req,res)=>{
     res.status(202).send('Health check done, app is running.')

@@ -166,7 +166,7 @@ const Slider4 = () => {
     <Box width="80%"   overflow="hidden" w="99vw" m="auto" mt="2" position="relative"   >
       <Slider {...settings}>
         {arr.map((elem, i) => (
-            <Box  boxShadow='md' p='6' rounded='md'   key={i} height="100%" w="100%" display="flex" flexDirection="column" alignItems="center" justifyContent="center" p="4">
+            <Box  boxShadow='md' p='6' rounded='md'   key={i} height="100%" w="100%" display="flex" flexDirection="column" alignItems="center" justifyContent="center"  >
             <Image src={elem.img} alt="slider" objectFit="cover" height="150px" width="150px" borderRadius="md" m={'auto'} />
             <Text mt="2" fontWeight="bold" textAlign="center">{elem.name}</Text>
             <Text mt="1" color="gray.500" textAlign="center">{elem.price}</Text>

@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Input, Text } from "@chakra-ui/react"
+import { Box, Button, Flex, Heading, Input, Text, useToast } from "@chakra-ui/react"
 import Navbar from "/src/components/Navbar/Navbar.jsx"
 import Footer from "/src/components/Footer/Footer.jsx"
 import BlackOneSlider from "../../components/slider/BlackOneSlider"
@@ -15,7 +15,8 @@ const Login = ()=>{
 
     const dispatch = useDispatch();
     const { isLogin } = useSelector((state) => state.loginState);
-  
+    const toast = useToast();
+
     const [credentials, setCredentials] = useState({
       email: "",
       password: "",
@@ -26,10 +27,29 @@ const Login = ()=>{
       dispatch(loginUser(credentials));
     };
   
+     
+    if(isLogin){
+      toast({
+        title: "Login Successful",
+        description: `Login Successful.`,
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+      
+    } else {
+      toast({
+        title: "Error",
+        description: "Wrong Credentials.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+    
     if (isLogin) {
       return <Navigate to="/logout" />;
     }
-  
 
 
     return(
@@ -124,3 +144,8 @@ const Login = ()=>{
 }
 
 export default Login
+
+
+
+
+ 

@@ -1,4 +1,4 @@
-import { LOGIN_NOT, LOGIN_SUCCESS, LOGOUT } from "./acrionTypes";
+import { LOGIN_NOT, LOGIN_SUCCESS, LOGOUT } from "./actionTypes";
 
 const initialState = {
   isLogin: false,
@@ -22,3 +22,6 @@ export const loginReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 };
+
+
+ 

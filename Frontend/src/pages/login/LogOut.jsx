@@ -1,6 +1,6 @@
-import { Box, Button, Heading, SimpleGrid, Text } from "@chakra-ui/react"
+import {   Button, Heading, SimpleGrid, Text } from "@chakra-ui/react"
 import { useDispatch } from "react-redux";
-import { LOGOUT } from "../../Redux/Login/acrionTypes";
+import { LOGOUT } from "../../Redux/Login/actionTypes";
 import Navbar from "../../components/Navbar/Navbar";
 import BlackOneSlider from "../../components/slider/BlackOneSlider";
 import Footer from "../../components/Footer/Footer";
@@ -32,7 +32,7 @@ const LogOut = () => {
           Order History
           </Heading>
           <Text>
-          You haven't placed any orders yet.
+          You have not placed any orders yet.
           </Text>
         </SimpleGrid>
 

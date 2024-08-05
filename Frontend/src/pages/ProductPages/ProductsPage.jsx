@@ -42,8 +42,8 @@
 import {
     Box,
     Button,
-    
-    Img,
+    Flex,
+    Image,
     Select,
     SimpleGrid,
     Text,
@@ -53,14 +53,17 @@ import {
   import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import BlackOneSlider from "../../components/slider/BlackOneSlider";
+import Left from "./Left";
  
  
   
   const  ProductsPage = () => {
     const [data, setData] = useState([]);
+    const [sortedData, setSortedData] = useState([]);
+
     const params = new URLSearchParams(window.location.search);
     const category = params.get("category");
-    const [sortedData, setSortedData] = useState([]);
     const navigate = useNavigate();
   
     const fetchData = async () => {
@@ -70,6 +73,7 @@ import Footer from "../../components/Footer/Footer";
         );
         console.log(resp.data);
         setData(resp.data.data);
+        setSortedData(resp.data.data);
       } catch (error) {
         console.log("Error in Fetching");
       }
@@ -77,6 +81,13 @@ import Footer from "../../components/Footer/Footer";
   
     useEffect(() => {
       fetchData();
+    }, []);
+
+    useEffect(() => {
+      window.scroll({
+        top: 0,
+        behavior: "instant",
+      });
     }, []);
   
     const handleClick = (id) => {
@@ -99,21 +110,22 @@ import Footer from "../../components/Footer/Footer";
     };
   
     return (
+      <>
+          <Navbar />
+          <BlackOneSlider/>
+      <Flex>
+        <Box w={'30%'} pt={'190px'} >
+        <Left/>
+          
+        </Box>
+        
       <Box>
-        <Navbar />
-        <Text fontWeight={700} fontSize={"24px"} p={[5, 5, 10, 10]}>
+        
+         
+         <SimpleGrid pt={10} w={'90%'} mb={5}  alignItems={'space-between'} >
+         <Text fontWeight={700} fontSize={"24px"} p={[5, 5, 50, 30]}>
           Products
         </Text>
-        <SimpleGrid gridTemplateColumns={["1fr", "1fr", "1fr 2fr", ".7fr 3fr"]}>
-          <SimpleGrid mb={5} p={10}  alignContent={"start"}>
-            <Text
-              fontSize={"12px"}
-              fontWeight={400}
-              color={"rgb(102, 102, 102)"}
-              mb={"20px"}
-            >
-              Filters
-            </Text>
             <Select
               variant="outline"
               placeholder="Choose"
@@ -128,8 +140,12 @@ import Footer from "../../components/Footer/Footer";
   
             
           </SimpleGrid>
+        <SimpleGrid  >
+          
   
           <SimpleGrid
+              w={'100%'}
+              m={'auto'}
             gridTemplateColumns={[
               "repeat(2,1fr)",
               "repeat(2,1fr)",
@@ -144,20 +160,20 @@ import Footer from "../../components/Footer/Footer";
             {(sortedData.length ? sortedData : data)?.map((elem) => (
               <SimpleGrid cursor={"pointer"} key={elem._id}>
                 <Box>
-                <Img src={elem.images[0]} alt="Image" />
+                <Image src={elem.image[0]} alt="Image" />
                 </Box>
                 <Text mt={8} fontWeight={700} fontSize={'12px'}>
-                  {elem.title}
+                  {elem.Header}
                 </Text>
                 <Text
-                  mb={2}
-                  fontWeight={400}
-                  fontSize={['13px','13px','14px',"14px"]}
+                 
+                  fontWeight={700} fontSize={'16px'}
                   _hover={{ textDecoration: "underline" }}
                   overflow={"hidden"} 
                   h={'40px'}
+                  textDecoration="line-through"
                 >
-                  {elem.description}
+                  ${elem.CutPrice}
                 </Text>
                 <Text fontWeight={700} fontSize={'16px'}>${elem.price}</Text>
                 <Button
@@ -175,7 +191,14 @@ import Footer from "../../components/Footer/Footer";
         </SimpleGrid>
         <Footer />
       </Box>
+
+
+
+      </Flex>
+      
+      </>
     );
   };
+  
   
   export default  ProductsPage;

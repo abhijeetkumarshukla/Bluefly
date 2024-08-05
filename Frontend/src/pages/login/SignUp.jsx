@@ -4,18 +4,23 @@ import BlackOneSlider from '/src/components/slider/BlackOneSlider';
 import Footer from '/src/components/Footer/Footer';
 import axios from 'axios';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { loginUser } from '../../Redux/Login/actions';
+import {  useNavigate } from 'react-router-dom';
  
 
-const SignUp = () => {
-  // State to manage form inputs
+const SignUp = () => { 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    username: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    
   });
-  const toast = useToast(); // Toast for displaying notifications
- 
+
+  const toast = useToast();
 
   // Handle input changes
   const handleChange = (e) => {
@@ -23,59 +28,70 @@ const SignUp = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission
-    // Check if password and confirmPassword match
+    e.preventDefault();
+      console.log('formData', formData)
     if (formData.password !== formData.confirmPassword) {
       toast({
-        title: 'Password mismatch',
-        description: 'Passwords do not match. Please try again.',
-        status: 'error',
+        title: "Password mismatch",
+        description: "Passwords do not match. Please try again.",
+        status: "error",
         duration: 3000,
         isClosable: true,
       });
-      return;
+     
     }
-    // Send POST request to backend
+
     try {
-      const response = await axios.post('http://localhost:8080/user/register', {
-        username: formData.username,
-        email: formData.email,
-        password: formData.password,
-      });
-      // Handle success response
-      if (response.status === 201) {
+        await axios.post(
+        `http://localhost:8080/user/register`,
+        { 
+          username: formData.username,
+          email: formData.email,
+          password: formData.password,
+          
+        }
+      );
+
         toast({
-          title: 'Account created',
+          title: "Account created",
           description: `Congratulations ${formData.username}, you are registered!`,
-          status: 'success',
+          status: "success",
           duration: 3000,
           isClosable: true,
         });
+      
+        const obj = { email: formData.email, password: formData.password };
+         dispatch(loginUser(obj));
 
         const isAuthUser = { isAuth: true, data: formData.username };
-        localStorage.setItem('user', JSON.stringify(isAuthUser));
+
+        localStorage.setItem("user", JSON.stringify(isAuthUser));
         setFormData({
-          // Reset form data
-          username: '',
-          email: '',
-          password: '',
-          confirmPassword: '',
+          username: "",
+          email: "",
+          password: "",
+          confirmPassword: "",
+         
         });
-        
-      }
+     
+        navigate('/login');
     } catch (error) {
-      console.error('Error creating account:', error);
+      console.error("Error creating account:", error.message);
       toast({
-        title: 'Error',
-        description: error.response?.data?.message || 'An error occurred while creating your account.',
-        status: 'error',
+        title: "Error",
+        description:
+          error.response?.data?.message ||
+          "An error occurred while creating your account.",
+        status: "error",
         duration: 3000,
         isClosable: true,
       });
     }
   };
+
+      
+ 
 
   return (
     <Box>
@@ -167,7 +183,7 @@ const SignUp = () => {
         </form>
       </Box>
 
-      {/* -------------------------------- */}
+      {/* /* -------------------------------- */}
 
       <Box w={'70vw'} pb={5} m={'auto'} mt={5} display={['block', 'Block', 'block', 'none']}>
         <form onSubmit={handleSubmit}>

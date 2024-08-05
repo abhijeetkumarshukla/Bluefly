@@ -30,8 +30,9 @@ const TopNavbar = () => {
            <CiSearch  size={'26'}/> 
          <Text ml={'-3'} fontSize='md'>SEARCH</Text>
          <NavLink to={'/login'}><TfiUser size={'23'} /> </NavLink>
-         <GoHeart  size={'24'}/>
+         
          <HiOutlineShoppingBag  size={'24'}/>
+         <NavLink to={'/cart'}> <GoHeart  size={'24'}/>   </NavLink>
          
          </Flex>  
         </Flex>   
@@ -330,8 +331,8 @@ const TopNavbar = () => {
            <CiSearch  size={'26'}/> 
         
          
-         <GoHeart  size={'24'}/>
-         <HiOutlineShoppingBag  size={'24'}/>
+           <HiOutlineShoppingBag  size={'24'}/>
+        <NavLink to={'/cart'}>  <GoHeart  size={'24'}/>  </NavLink>
          
          </Flex>  
         </Flex> 

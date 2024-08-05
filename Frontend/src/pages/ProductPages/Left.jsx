@@ -4,7 +4,7 @@ import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPane
 const Left = () => {
   return (
    <>
-     <SimpleGrid w={'20%'}>
+     <SimpleGrid >
            
      <Accordion defaultIndex={[0]} allowMultiple>
   <AccordionItem>

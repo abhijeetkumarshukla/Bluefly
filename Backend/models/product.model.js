@@ -12,9 +12,9 @@ const productSchema = mongoose.Schema({
 });
 
 productSchema.index({
-  title: "text",
+  Header: "text",
   category: "text",
-  description: "text",
+  CutPrice: "text",
   tags: "text",
   types: "text",
 });

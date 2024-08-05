@@ -158,17 +158,17 @@ const DropDownNavbar = () => {
       <SimpleGrid gap={3} mt={5}>
       <TextBox text={' Shop All'} category={"womenclothing"} />
       <TextBox text={' Activewear'} category={"womenclothing"}/>
-      <TextBox text={'Coats & Jackets'}/>
-      <TextBox text={'Dresses '}/>
-      <TextBox text={'Jeans & Denim '}/>
-      <TextBox text={'Jumpsuits & Rompers '}/>
-      <TextBox text={' Lingerie & Hosiery'}/>
-      <TextBox text={'Loungewear & Sleepwear '}/>
-      <TextBox text={'Shorts '}/>
-      <TextBox text={'Skirts '}/>
-      <TextBox text={'Sweaters   '}/>
-      <TextBox text={' Sweatshirts & Hoodies '}/>
-      <TextBox text={' Swimwear & Coverups'}/>
+      <TextBox text={'Coats & Jackets'} category={"womenclothing"}/>
+      <TextBox text={'Dresses '} category={"womenclothing"}/>
+      <TextBox text={'Jeans & Denim '} category={"womenclothing"}/>
+      <TextBox text={'Jumpsuits & Rompers '} category={"womenclothing"}/>
+      <TextBox text={' Lingerie & Hosiery'} category={"womenclothing"}/>
+      <TextBox text={'Loungewear & Sleepwear '} category={"womenclothing"}/>
+      <TextBox text={'Shorts '} category={"womenclothing"}/>
+      <TextBox text={'Skirts '} category={"womenclothing"}/>
+      <TextBox text={'Sweaters'} category={"womenclothing"} />
+      <TextBox text={' Sweatshirts & Hoodies '} category={"womenclothing"}/>
+      <TextBox text={' Swimwear & Coverups'} category={"womenclothing"}/>
       
           </SimpleGrid>
 
@@ -531,130 +531,25 @@ const DropDownNavbar = () => {
         <Text fontWeight={600}>Mens Sunglasses </Text>
 
         <SimpleGrid gap={3} mt={5}>
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                          Shop All
-                        </Text>
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                           Burberry
-                        </Text>
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                           Carrera
-                        </Text>
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                          Dior
-                        </Text>
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                          Ermenegildo Zegna
-                        </Text>
 
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        > 
-                        Givenchy
-                        </Text>
-
-
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                             Gucci
-                        </Text>
-
-
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                            Jimmy Choo
-                        </Text>
-
-
-
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                            Montblanc
-                        </Text>
-
-
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                            Persol
-                        </Text>
-
-
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                         Prada       
-                        </Text>
-
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                        Ray Ban
-                        </Text>
-
-                        <Text
-                          fontSize={"small"}
-                          color="gray"
-                          _hover={{ color: "black" }}
-                          transition="color 0.1s"
-                        >
-                           Saint Laurent
-                        </Text>
+           
+      <TextBox text={'Shop All'}/>
+      <TextBox text={'Burberry'}/>
+      <TextBox text={'Carrera'}/>
+      <TextBox text={'Dior'}/>
+      <TextBox text={'Ermenegildo Zegna'}/>
+      <TextBox text={'Givenchy '}/>
+      <TextBox text={'Gucci '}/>
+      <TextBox text={' Jimmy Choo '}/>
+      <TextBox text={' Montblanc'}/>
+      <TextBox text={' Persol'}/>
+      <TextBox text={' Prada '}/>
+      <TextBox text={'Ray Ban'}/>
+      <TextBox text={' Saint Laurent'}/>
+            
                       </SimpleGrid>
       </SimpleGrid>
     </SimpleGrid>
-
-
-
 
     </PopoverBody>
   </PopoverContent>
@@ -686,30 +581,18 @@ const DropDownNavbar = () => {
             <Text fontWeight={600}>Womens Accessories</Text>
           </Link>
           <SimpleGrid gap={3}>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Shop All
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Bag Charms, Straps, & Accessories
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Belts
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Cosmetic Bags
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Gloves
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Scarves & Wraps
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Optical & Reading Glasses
-            </Text>
-            <Text fontSize="small" color="gray" _hover={{ color: "black" }} transition="color 0.1s">
-              Travel Bags & Luggage
-            </Text>
+
+
+
+      <TextBox text={'Shop All'}/>
+      <TextBox text={'Bag Charms, Straps, & Accessories'}/>
+      <TextBox text={ ' Belts'}/>
+      <TextBox text={'Cosmetic Bags'}/>
+      <TextBox text={'Gloves'}/>
+      <TextBox text={'Scarves & Wraps'}/>
+      <TextBox text={' Optical & Reading Glasses'}/>
+      <TextBox text={'Travel Bags & Luggage'}/>
+      
           </SimpleGrid>
         </SimpleGrid>
 
@@ -719,6 +602,10 @@ const DropDownNavbar = () => {
         </SimpleGrid>
 
         <SimpleGrid>
+
+        
+
+
           <Text fontWeight={600}>Shop All</Text>
         </SimpleGrid>
       </SimpleGrid>

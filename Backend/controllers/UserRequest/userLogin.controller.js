@@ -28,7 +28,7 @@ const userLogin = async (req, res) => {
           process.env.JWT_SECRET
         );
 
-        return res.status(200).send({ message: "Login successful", Token: token });
+        return res.status(200).send({ message: "Login successful", "token": token, "user": user });
       } else {
         return res.status(401).send({ message: "Incorrect password" });
       }

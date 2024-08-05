@@ -3,8 +3,26 @@ import { Navigate } from "react-router-dom";
 
 function PrivateRoutes({ children }) {
   const { isLogin } = useSelector((state) => state.loginState);
+   const data = JSON.parse(localStorage.getItem("user"));
 
-  return isLogin ? children : <Navigate to="/login" />;
+  return isLogin || data?.isAuth   ? children : <Navigate to="/login" />;
 }
 
 export default PrivateRoutes;
+
+
+
+
+
+// import { useSelector } from "react-redux";
+// import { Navigate } from "react-router-dom";
+
+// function PrivateRoutes({ children }) {
+//   const { isLogin } = useSelector((state) => state.loginState);
+//    const data = JSON.parse(localStorage.getItem("user"));
+
+//   return isLogin || data?.isAuth ? children : <Navigate to="/login" />;
+// }
+
+// export default PrivateRoutes;
+

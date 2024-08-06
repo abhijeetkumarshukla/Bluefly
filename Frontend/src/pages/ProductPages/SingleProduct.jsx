@@ -89,7 +89,7 @@ import Footer from "../../components/Footer/Footer";
         }
   
         const response = await axios.post(
-          `http://localhost:3000/cart/add/${id}`,
+          `http://localhost:8080/cart/add/${id}`,
           {},
           {
             headers: {
@@ -155,19 +155,19 @@ import Footer from "../../components/Footer/Footer";
             />
   
             <Flex mt={5}>
-              {data.images &&
-                data.images.map((image, index) => (
+              {data.image &&
+                data.image.map((photo, index) => (
                   <Img
                     key={index}
-                    src={image}
+                    src={photo}
                     alt={`Thumbnail ${index + 1}`}
                     boxSize="100px"
                     objectFit="cover"
                     border="1px solid rgba(0,0,0,0.2)"
                     mr={2}
                     cursor="pointer"
-                    onClick={() => setSelectedImage(image)}
-                    opacity={selectedImage === image ? 0.7 : 1}
+                    onClick={() => setSelectedImage(photo)}
+                    opacity={selectedImage === photo ? 0.7 : 1}
                     _hover={{ opacity: 0.7 }}
                   />
                 ))}
@@ -176,7 +176,7 @@ import Footer from "../../components/Footer/Footer";
   
           <SimpleGrid>
             <Text fontSize={"24px"} fontWeight={500} mb={4}>
-              {data.title}
+              {data.Header}
             </Text>
             <Flex justifyContent={"space-between"} mb={4}>
               <Text fontWeight={500} fontSize={"20px"}>
@@ -187,7 +187,7 @@ import Footer from "../../components/Footer/Footer";
               </Text>
             </Flex>
             <Box mb={6}>
-              <Text fontSize={"16px"}>{data.description}</Text>
+              <Text fontSize={"16px"}>{data.CutPrice}</Text>
             </Box>
             <Button
               bg={"#296293"}

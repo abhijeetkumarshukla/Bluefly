@@ -114,7 +114,8 @@ import Left from "./Left";
           <Navbar />
           <BlackOneSlider/>
       <Flex>
-        <Box w={'30%'} pt={'190px'} >
+        <Box 
+        w="30%" pt="115px" display={{ base: "none", md: "block" }} >
         <Left/>
           
         </Box>
@@ -122,8 +123,8 @@ import Left from "./Left";
       <Box>
         
          
-         <SimpleGrid pt={10} w={'90%'} mb={5}  alignItems={'space-between'} >
-         <Text fontWeight={700} fontSize={"24px"} p={[5, 5, 50, 30]}>
+         <Flex pt={10} w={'90%'} mb={5} flexDirection={'row'}  justifyContent={'space-between'} >
+         <Text fontWeight={700} fontSize={"24px"}  >
           Products
         </Text>
             <Select
@@ -133,13 +134,14 @@ import Left from "./Left";
               borderRadius={"none"}
               cursor={"pointer"}
               onChange={handleChange}
+              w={'200px'}
             >
               <option value="ltoh">Price: Low To High</option>
               <option value="htol">Price: High To Low</option>
             </Select>
   
             
-          </SimpleGrid>
+          </Flex>
         <SimpleGrid  >
           
   
@@ -165,17 +167,22 @@ import Left from "./Left";
                 <Text mt={8} fontWeight={700} fontSize={'12px'}>
                   {elem.Header}
                 </Text>
-                <Text
-                 
-                  fontWeight={700} fontSize={'16px'}
-                  _hover={{ textDecoration: "underline" }}
-                  overflow={"hidden"} 
-                  h={'40px'}
-                  textDecoration="line-through"
-                >
-                  ${elem.CutPrice}
-                </Text>
-                <Text fontWeight={700} fontSize={'16px'}>${elem.price}</Text>
+               <Flex  m={'auto'} gap={3}>
+
+               <Text
+                 fontWeight={700} fontSize={'16px'}
+                 overflow={"hidden"}   
+                 textDecoration="line-through"
+                 >
+                 ${elem.CutPrice}
+               </Text>
+               <Text  fontWeight={700} fontSize={'16px'}>from</Text>
+               <Text fontWeight={700} fontSize={'16px'}>${elem.price}</Text>
+                   </Flex>
+               
+               
+               
+               <Text textAlign={'center'} fontWeight={700} color={'red'} fontSize={'16px'}>Save{elem.Save}%</Text>
                 <Button
                   _hover={{ color: "white" }}
                   mt={'12px'}
@@ -189,13 +196,11 @@ import Left from "./Left";
             ))}
           </SimpleGrid>
         </SimpleGrid>
-        <Footer />
+       
       </Box>
 
-
-
       </Flex>
-      
+      <Footer />
       </>
     );
   };

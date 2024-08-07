@@ -164,7 +164,7 @@ import Left from "./Left";
                 <Box>
                 <Image src={elem.image[0]} alt="Image" />
                 </Box>
-                <Text mt={8} fontWeight={700} fontSize={'12px'}>
+                <Text mt={8} textAlign={'center'} fontWeight={800} fontSize={'12px'}>
                   {elem.Header}
                 </Text>
                <Flex  m={'auto'} gap={3}>

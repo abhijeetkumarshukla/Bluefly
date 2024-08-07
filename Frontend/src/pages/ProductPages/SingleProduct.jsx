@@ -43,6 +43,7 @@ import {
   import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import BlackOneSlider from "../../components/slider/BlackOneSlider";
  
   
   const  SingleProduct = () => {
@@ -54,10 +55,10 @@ import Footer from "../../components/Footer/Footer";
   
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/product/${id}`);
+        const res = await axios.get(`http://localhost:8080/product/${id}`);
         // console.log(res.data.Product);
         setData(res.data.Product);
-        setSelectedImage(res.data.Product.images[0]);
+        setSelectedImage(res.data.Product.image[0]);
       } catch (error) {
         console.error("Error fetching product data:", error.message); // Improve error message
         toast({
@@ -130,8 +131,10 @@ import Footer from "../../components/Footer/Footer";
     };
   
     return (
-      <Box>
+      <>
         <Navbar />
+        <BlackOneSlider/>
+      <Box>
         <SimpleGrid
           gridTemplateColumns={[
             "repeat(1,1fr)",
@@ -149,7 +152,7 @@ import Footer from "../../components/Footer/Footer";
               src={selectedImage}
               alt="Main Image"
               boxSize="500px"
-              // objectFit="cover"
+              
               border="2px solid rgba(0,0,0,0.2)"
               mb={5}
             />
@@ -199,8 +202,9 @@ import Footer from "../../components/Footer/Footer";
             </Button>
           </SimpleGrid>
         </SimpleGrid>
-        <Footer />
       </Box>
+        <Footer />
+              </>
     );
   };
   

@@ -1,33 +1,3 @@
-
-// import { Box } from "@chakra-ui/react"
-// import axios from "axios"
-// import { useEffect, useState } from "react"
-// import { useParams } from "react-router-dom"
-// const  SingleProduct = () => {
-//     const {id} = useParams()
-//     const [data,setData]= useState({})
-//     const fetchData = async()=>{
-//         try {
-//             const res = await axios.get(`http://localhost:3000/product/${id}`)
-//             console.log(res.data)
-//             setData(res.data)
-//         } catch (error) {
-//             console.log(error.message)
-//         }
-//     }
-//     useEffect(()=>{
-//         fetchData()
-//     },[])
-
-//   return (
-//     <Box>
-//         {}
-//     </Box>
-//   )
-// }
-// export default SingleProduct
-
-
 import {
      
     Box,
@@ -37,10 +7,10 @@ import {
     SimpleGrid,
     Text,
     useToast,
-  } from "@chakra-ui/react";
-  import axios from "axios";
-  import { useEffect, useState } from "react";
-  import { useParams } from "react-router-dom";
+} from "@chakra-ui/react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import BlackOneSlider from "../../components/slider/BlackOneSlider";
@@ -51,7 +21,7 @@ import BlackOneSlider from "../../components/slider/BlackOneSlider";
   
     const [data, setData] = useState({});
     const [selectedImage, setSelectedImage] = useState(null);
-    const toast = useToast(); // Initialize the toast hook
+    const toast = useToast(); 
   
     const fetchData = async () => {
       try {
@@ -60,7 +30,7 @@ import BlackOneSlider from "../../components/slider/BlackOneSlider";
         setData(res.data.Product);
         setSelectedImage(res.data.Product.image[0]);
       } catch (error) {
-        console.error("Error fetching product data:", error.message); // Improve error message
+        console.error("Error fetching product data:", error.message);  
         toast({
           title: "Error Fetching Data",
           description: "Failed to load product details. Please try again later.",
@@ -78,7 +48,7 @@ import BlackOneSlider from "../../components/slider/BlackOneSlider";
   
     const handleClick = async () => {
       try {
-        // Check if user details exist in local storage
+       
         const user = localStorage.getItem("user");
         if (!user) {
           throw new Error("User not logged in");
@@ -134,7 +104,7 @@ import BlackOneSlider from "../../components/slider/BlackOneSlider";
       <>
         <Navbar />
         <BlackOneSlider/>
-      <Box>
+      <Box fontFamily={' Georgia, serif'}>
         <SimpleGrid
           gridTemplateColumns={[
             "repeat(1,1fr)",
@@ -178,22 +148,31 @@ import BlackOneSlider from "../../components/slider/BlackOneSlider";
           </Box>
   
           <SimpleGrid>
-            <Text fontSize={"24px"} fontWeight={500} mb={4}>
+            <Text fontSize={"35px"}     fontWeight={500} >
               {data.Header}
             </Text>
-            <Flex justifyContent={"space-between"} mb={4}>
-              <Text fontWeight={500} fontSize={"20px"}>
-                Your Price
+
+             
+             
+            <Flex   gap={4}   >
+
+              
+            <Text    fontWeight={700} fontSize={'30px'}
+                 overflow={"hidden"}   
+                 textDecoration="line-through">${data.CutPrice}</Text>
+
+              <Text fontWeight={500} fontSize={"30px"}>
+              from
               </Text>
-              <Text fontWeight={500} fontSize={"20px"}>
+              <Text fontWeight={700}   fontSize={"30px"}>
                 ${data.price}
               </Text>
             </Flex>
-            <Box mb={6}>
-              <Text fontSize={"16px"}>{data.CutPrice}</Text>
-            </Box>
-            <Button
-              bg={"#296293"}
+            <Text  fontWeight={700} color={'red'} fontSize={'30px'}>Save {data.Save}%</Text>
+ 
+
+            <Button  
+              bg={"black"}
               color={"white"}
               _hover={{ color: "white", bg: "#1D4F6D" }}
               onClick={handleClick}

@@ -29,11 +29,10 @@ const TopNavbar = () => {
          <Flex w={'42%'}  pt={'2'} gap={'4'}   pr={'8'} justifyContent={'end'}>
            <CiSearch  size={'26'}/> 
          <Text ml={'-3'} fontSize='md'>SEARCH</Text>
-         <NavLink to={'/login'}><TfiUser size={'23'} /> </NavLink>
-         
-         <HiOutlineShoppingBag  size={'24'}/>
-         <NavLink to={'/cart'}> <GoHeart  size={'24'}/>   </NavLink>
-         
+         <NavLink to={'/login'}><TfiUser size={'23'} /> </NavLink> 
+         <NavLink to={'/cart'}> <HiOutlineShoppingBag  size={'24'}/>    </NavLink>
+         <GoHeart  size={'24'}/>
+
          </Flex>  
         </Flex>   
 
@@ -323,17 +322,19 @@ const TopNavbar = () => {
 
          <Flex
               
-      justifyContent="end" pl={3} pt={'1'} >
-          <Image  height={'25'}    width={'160px'} src="https://www.bluefly.com/cdn/shop/files/BLUEFLY-LOGO-11-20.png?v=1613183141" alt="main_logo"/>
+           justifyContent="end" pl={3} pt={'1'} >
+          <NavLink to={'/'}>
+          <Image  height={'25'} width={'160px'} src="https://www.bluefly.com/cdn/shop/files/BLUEFLY-LOGO-11-20.png?v=1613183141" alt="main_logo"/>
+          </NavLink>
          </Flex>
 
          <Flex   pt={'2 '} gap={'2'}   pr={'4'} justifyContent={'end'}>
            <CiSearch  size={'26'}/> 
         
          
-           <HiOutlineShoppingBag  size={'24'}/>
-        <NavLink to={'/cart'}>  <GoHeart  size={'24'}/>  </NavLink>
-         
+            
+        <NavLink to={'/cart'}> <HiOutlineShoppingBag  size={'24'}/>    </NavLink>
+        <GoHeart  size={'24'}/>
          </Flex>  
         </Flex> 
 

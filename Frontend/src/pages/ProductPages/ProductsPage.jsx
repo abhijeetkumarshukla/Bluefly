@@ -190,7 +190,7 @@ import Left from "./Left";
                   color={"white"}
                   onClick={() => handleClick(elem._id)}
                 >
-                  Add
+                  See The Details
                 </Button>
               </SimpleGrid>
             ))}

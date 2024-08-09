@@ -97,7 +97,7 @@ const Home = () => {
   {/* =-------------------------------------------*/}
 
 
-  <Flex gap={6} justifyContent={'center'}   flexDirection={['column', 'column', 'row']} color={'white'} pt={10} w={'100%'} m={'auto'} fontWeight={500}>
+  <Flex gap={6} justifyContent={'center'} pl={3}  flexDirection={['column', 'column', 'row']} color={'white'} pt={10} w={'100%'} m={'auto'} fontWeight={500}>
     <Flex flexDirection={'column'}   pt={'80px'}  backgroundImage="url('https://www.bluefly.com/cdn/shop/files/Bluefly_Tile_Refresh_2_540x.png?v=1712086012')"
       backgroundSize="cover"
       backgroundPosition="center"

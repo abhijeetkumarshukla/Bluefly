@@ -22,8 +22,15 @@ function App() {
     <Route path='/login' element={<Login/>}/>
     <Route path='/signup' element={<SignUp/>}/>
     <Route path='/logout' element={ <PrivateRoutes><LogOut/></PrivateRoutes> }/>
-     {/* <Route path='/left' element={<Left/>}/> */}
-      <Route path='/cart' element={<Cart/>}/>  
+    
+     <Route
+        path="/cart"
+        element={
+          <PrivateRoutes>
+            <Cart />
+          </PrivateRoutes>
+        }
+      />
       <Route path='/products' element={<ProductsPage/>}/>  
       <Route path='/products/:id' element={<SingleProduct/>}/>  
     </Routes>

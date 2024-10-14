@@ -97,7 +97,8 @@ const CartPage = () => {
                   alt={<Spinner />}
                 />
               </Flex>
-            ) : data && data.length > 0 ? (
+            )
+             : data && data.length > 0 ? (
               data.map((elem, i) => (
                 <GetSinglePro
                   singleData={elem}
@@ -106,7 +107,8 @@ const CartPage = () => {
                   allProducts={allProducts}
                 />
               ))
-            ) : (
+            ) 
+            : (
               <Box mt={5}>
                 <Divider mb={10} bg={"grey"} h={0.8} />
 

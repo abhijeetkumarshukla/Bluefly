@@ -11,13 +11,13 @@ const productSchema = mongoose.Schema({
   types: [{ type: String, required: true }],
 });
 
-productSchema.index({
-  Header: "text",
-  category: "text",
-  CutPrice: "text",
-  tags: "text",
-  types: "text",
-});
+// productSchema.index({
+//   Header: "text",
+//   category: "text",
+//   CutPrice: "text",
+//   tags: "text",
+//   types: "text",
+// });
 
 const ProductModel = mongoose.model("product", productSchema);
 

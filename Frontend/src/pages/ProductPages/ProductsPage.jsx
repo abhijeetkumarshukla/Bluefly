@@ -70,7 +70,7 @@ import Left from "./Left";
     const fetchData = async () => {
       try {
         const resp = await axios.get(
-          `http://localhost:8080/product?category=${category}`
+          `${BASEURL}product?category=${category}`
         );
         console.log(resp.data);
         setData(resp.data.data);

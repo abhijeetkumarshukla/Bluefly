@@ -2,7 +2,8 @@ import axios from "axios";
 import { LOGIN_NOT, LOGIN_SUCCESS } from "./actionTypes";
 
 export const loginUser = (credentials) => async (dispatch) => {
-  const API_URL = "http://localhost:8080/user/login";
+  const BASEURL= import.meta.env.VITE_BASEURL
+  const API_URL = `${BASEURL}user/login`;
   try {
     const resp = await axios.post(API_URL, credentials);
 

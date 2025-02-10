@@ -23,6 +23,7 @@ import { getCartItems } from "../../Redux/Cart/action";
 import GetSinglePro from "../../components/GetSinglePro";
 
 const CartPage = () => {
+  const BASEURL= import.meta.env.VITE_BASEURL
   const dispatch = useDispatch();
   const data = useSelector((state) => state.cartData);
   const { loading } = useSelector((state) => state.loading);
@@ -46,7 +47,7 @@ const CartPage = () => {
       await Promise.all(
         data?.map(async (el) => {
           await axios.delete(
-            `http://localhost:8080/cart/remove/${el.productId}`,
+            `${BASEURL}cart/remove/${el.productId}`,
             {
               headers: {
                 "Content-Type": "application/json",

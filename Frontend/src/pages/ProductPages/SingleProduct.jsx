@@ -17,6 +17,7 @@ import BlackOneSlider from "../../components/slider/BlackOneSlider";
  
   
   const  SingleProduct = () => {
+    const BASEURL= import.meta.env.VITE_BASEURL
     const { id } = useParams();
   
     const [data, setData] = useState({});
@@ -25,7 +26,7 @@ import BlackOneSlider from "../../components/slider/BlackOneSlider";
   
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/product/${id}`);
+        const res = await axios.get(`${BASEURL}product/${id}`);
         // console.log(res.data.Product);
         setData(res.data.Product);
         setSelectedImage(res.data.Product.image[0]);
@@ -60,7 +61,7 @@ import BlackOneSlider from "../../components/slider/BlackOneSlider";
         }
   
         const response = await axios.post(
-          `http://localhost:8080/cart/add/${id}`,
+          `${BASEURL}cart/add/${id}`,
           {},
           {
             headers: {

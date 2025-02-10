@@ -10,6 +10,7 @@ import {  useNavigate } from 'react-router-dom';
  
 
 const SignUp = () => { 
+  const BASEURL= import.meta.env.VITE_BASEURL
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ const SignUp = () => {
 
     try {
         await axios.post(
-        `http://localhost:8080/user/register`,
+        `${BASEURL}user/register`,
         { 
           username: formData.username,
           email: formData.email,

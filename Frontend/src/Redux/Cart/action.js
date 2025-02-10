@@ -3,7 +3,8 @@ import { CARTITEMS } from "./actionTypes";
 import { IS_LOADING, NO_LOADING, ERROR } from "../Loading/actionTypes";
 
 export const getCartItems = async (dispatch) => {
-  const API_URL = `http://localhost:8080/cart`;
+  const BASEURL= import.meta.env.VITE_BASEURL
+  const API_URL = `${BASEURL}cart`;
   dispatch({ type: IS_LOADING });
 
   try {

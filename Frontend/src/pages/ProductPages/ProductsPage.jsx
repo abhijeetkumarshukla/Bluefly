@@ -59,6 +59,7 @@ import Left from "./Left";
  
   
   const  ProductsPage = () => {
+    const BASEURL= import.meta.env.VITE_BASEURL
     const [data, setData] = useState([]);
     const [sortedData, setSortedData] = useState([]);
 
